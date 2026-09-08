@@ -8,7 +8,7 @@
   Not a general VHDL parser: one statement per line, no nested blocks
   beyond a single port/process region, no expressions or statement
   semantics."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (defn- blank-or-comment?
   [line]
@@ -53,7 +53,7 @@
         (let [[_ pname mode type] (re-find port-decl-re line)]
           (update-in acc [:result :ports] (fnil conj [])
                      {:name pname
-                      :mode (keyword (str/lower-case mode))
+                      :mode (keyword (str/lower mode))
                       :type (str/trim type)}))
 
         :else acc))
