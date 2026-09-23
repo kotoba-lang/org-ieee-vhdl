@@ -1,5 +1,5 @@
 (ns vhdl.parser-test
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [vhdl.entity :as entity]
             [vhdl.parser :as parser]))
 

@@ -1,5 +1,5 @@
 (ns vhdl.signal-test
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [vhdl.signal :as signal]))
 
 (deftest default-value-test
