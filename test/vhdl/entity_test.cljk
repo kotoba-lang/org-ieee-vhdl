@@ -1,5 +1,5 @@
 (ns vhdl.entity-test
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [vhdl.entity :as entity]))
 
 (def and-gate
